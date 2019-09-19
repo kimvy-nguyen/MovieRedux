@@ -12,8 +12,8 @@ namespace MovieRedux
         public string Category { get; set; }
         public int RunTime { get; set; }
         public List<string> Scenes { get; set; }
-        
-        
+
+
         public Movie(string title, string category, int runTime, List<string> scenes)
         {
             this.Title = title;
@@ -25,20 +25,21 @@ namespace MovieRedux
         {
             return $"{Title}  {Category} {RunTime}";
         }
-        public virtual string PrintInfo() { 
-
-        
-        foreach(string scene in Scenes)
-            {
-            Console.WriteLine(scene);
-            
-                }
-        
-
-    }
-        public virtual string PrintScenes()
+        public virtual void PrintInfo()
         {
-            List<string> Scenes = new List<string>();
+
+
+            foreach (string scene in Scenes)
+            {
+                Console.WriteLine(scene);
+
+            }
+
+
+        }
+        public void PrintScenes()
+        {
+            //List<string> Scenes = new List<string>();
             foreach (string scene in Scenes)
             {
                 Console.WriteLine(scene);
@@ -47,7 +48,7 @@ namespace MovieRedux
 
         public abstract void Play()
         {
-            //fill
+            //complete
         }
 
         internal static void PrintInfo(object p)
@@ -55,3 +56,4 @@ namespace MovieRedux
             throw new NotImplementedException();
         }
     }
+}

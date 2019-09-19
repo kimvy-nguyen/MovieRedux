@@ -8,7 +8,7 @@ namespace MovieRedux
 {
     public class DVD : Movie
     {
-        public void Play()
+        public override void Play()
         {
             Console.WriteLine("Which scene would you like to watch?");
             foreach (string scene in Scenes)

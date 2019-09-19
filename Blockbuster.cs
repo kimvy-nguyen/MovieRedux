@@ -10,6 +10,7 @@ namespace MovieRedux
     {
         public List<Movie> GetMovies(List<Movie> Movies)
         {
+            
             Movies.Add(new DVD("Up", "Children's Movies", 85, "The Cute Part,The Sad Part,The Happy Part"));
             Movies.Add(new DVD("Superhero Something", "Action & Suspense", 120, "Backstory, Love Interest, The Final Fight"));
             Movies.Add(new DVD("The Conjuring", "Horror", 78, "The New House, The Guests, The Exorcism"));
@@ -19,7 +20,7 @@ namespace MovieRedux
             return Movies;
         }
 
-        public string PrintMovies()
+        public void PrintMovies()
         {
             for (int i = 0; i < Movies.Count; i++)
             {
@@ -30,7 +31,7 @@ namespace MovieRedux
 
 
         }
-        public string CheckOut()
+        public void CheckOut()
         {
             PrintMovies();
             Console.WriteLine("Which movie would you like to checkout?");
