@@ -1,0 +1,2 @@
+C:\Users\GC Student\Source\Repos\MovieRedux\MovieRedux\obj\Debug\MovieRedux.csprojAssemblyReference.cache
+C:\Users\GC Student\Source\Repos\MovieRedux\MovieRedux\obj\Debug\MovieRedux.csproj.CoreCompileInputs.cache
