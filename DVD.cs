@@ -8,12 +8,12 @@ namespace MovieRedux
 {
     public class DVD : Movie
     {
-        public DVD(string title, string category, int runTime)
+        public DVD(string title, string category, int runTime /*List<string> Scenes*/)
         {
             this.Title = title;
             this.Category = category;
             this.RunTime = runTime;
-            Scenes = new List<string>();
+            //Scenes = new List<string>();
         }
 
 

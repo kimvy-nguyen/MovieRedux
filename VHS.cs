@@ -10,14 +10,17 @@ namespace MovieRedux
     {
         public int CurrentTime { get; set; }
 
-        public VHS(string title, string category, int runTime, int CurrentTime)
+        public VHS(string title, string category, int runTime, int CurrentTime/*, string[] Scenes*/)
         {
             this.Title = title;
             this.Category = category;
             this.RunTime = runTime;
             this.CurrentTime = CurrentTime;
-            Scenes = new List<string>();
+            //this.Scenes = Scenes;
+            
         }
+
+       
 
         
 
