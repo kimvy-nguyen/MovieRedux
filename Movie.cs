@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MovieRedux
 {
-    abstract class Movie
+    public abstract class Movie
     {
         public string Title { get; set; }
         public string Category { get; set; }
@@ -14,46 +14,33 @@ namespace MovieRedux
         public List<string> Scenes { get; set; }
 
 
-        public Movie(string title, string category, int runTime, List<string> scenes)
-        {
-            this.Title = title;
-            this.Category = category;
-            this.RunTime = runTime;
-            this.Scenes = scenes;
-        }
+        
         public override string ToString()
         {
             return $"{Title}  {Category} {RunTime}";
         }
         public virtual void PrintInfo()
         {
-
-
-            foreach (string scene in Scenes)
-            {
-                Console.WriteLine(scene);
-
-            }
-
-
+            Console.WriteLine(this);
         }
         public void PrintScenes()
         {
             //List<string> Scenes = new List<string>();
             foreach (string scene in Scenes)
             {
-                Console.WriteLine(scene);
+                for(int i = 0; i <Scenes.Count; i++)
+                {
+                    Console.WriteLine($"{i}.");
+                    //eventually increment index to align w user input starting @1
+                }
+
+                Console.Write(scene);
             }
         }
 
-        public abstract void Play()
-        {
-            //complete
-        }
+        public abstract void Play();
+        
+        
 
-        internal static void PrintInfo(object p)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -8,16 +8,19 @@ namespace MovieRedux
 {
     public class Blockbuster
     {
-        public List<Movie> GetMovies(List<Movie> Movies)
+
+
+        public Blockbuster
         {
-            
+            List<Movie> Movies = new List<Movie>();
+
             Movies.Add(new DVD("Up", "Children's Movies", 85, "The Cute Part,The Sad Part,The Happy Part"));
-            Movies.Add(new DVD("Superhero Something", "Action & Suspense", 120, "Backstory, Love Interest, The Final Fight"));
-            Movies.Add(new DVD("The Conjuring", "Horror", 78, "The New House, The Guests, The Exorcism"));
+            new DVD{"Superhero Something", "Action & Suspense", 120, "Backstory, Love Interest, The Final Fight"}
+           /* Movies.Add(new DVD("The Conjuring", "Horror", 78, "The New House, The Guests, The Exorcism"));
             Movies.Add(new VHS("Chucky", "Horror", 120, "The Needles, The Wife, The Acid"));
             Movies.Add(new VHS("Puppy Pet Tales", "Children's Movies", 130, "Meet Molly, Saving Ben, Solve the Mystery"));
-            Movies.Add(new VHS("Fight Club", "Action & Suspense", 100, "Brad Pritt, Edward Norton, Can You Tell I Haven't Seen It?"));
-            return Movies;
+            Movies.Add(new VHS("Fight Club", "Action & Suspense", 100, "Brad Pritt, Edward Norton, Can You Tell I Haven't Seen It?"));*/
+            
         }
 
         public void PrintMovies()

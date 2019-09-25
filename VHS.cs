@@ -10,17 +10,28 @@ namespace MovieRedux
     {
         public int CurrentTime { get; set; }
 
-        public VHS(string title, string category, int runTime, List<string> scenes, int CurrentTime)
+        public VHS(string title, string category, int runTime, int CurrentTime)
         {
             this.Title = title;
             this.Category = category;
             this.RunTime = runTime;
-            this.Scenes = scenes;
             this.CurrentTime = CurrentTime;
+            Scenes = new List<string>();
         }
+
+        
+
+
+
         public override void Play()
         {
+            this.CurrentTime = CurrentTime;
+            for(int i = CurrentTime; i < RunTime; i++)
+            {
+                CurrentTime++;
+            }
             //plays scene at current time and then increments current time
+
         }
 
         public void Rewind()
